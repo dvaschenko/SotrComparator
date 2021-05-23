@@ -1,5 +1,5 @@
 package Quick;
-public class ShellSort {
+public class ShellSort {             // to see explanations visit https://en.wikipedia.org/wiki/Quicksort
     public int[] sort(int[] toSort){
         int inner;
         int outer;

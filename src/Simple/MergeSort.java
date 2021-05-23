@@ -2,28 +2,28 @@ package Simple;
 
 public class MergeSort {
 
-    public int[] sort (int[] toSort){
+    public int[] sort (int[] toSort){                                                    // takes array
 
         int[] copyToSort = new int[toSort.length];
 
-        System.arraycopy(toSort, 0, copyToSort, 0, toSort.length);
+        System.arraycopy(toSort, 0, copyToSort, 0, toSort.length);         // makes a copy to sort
 
-        recMergeSort(copyToSort,0,toSort.length-1);
+        recMergeSort(copyToSort,0,toSort.length-1);                 // recursively sorts array
 
         return copyToSort;
     }
 
-    private void recMergeSort(int[] copyToSort, int lowerBound, int upperBound){
+    private void recMergeSort(int[] copyToSort, int lowerBound, int upperBound){        // if only one elem - sorted, return
         if (lowerBound == upperBound) {
             return;
         }
         else {
-            int mid = (lowerBound + upperBound) / 2;
+            int mid = (lowerBound + upperBound) / 2;                                    // pont to separate array into two parts
 
-            recMergeSort(copyToSort, lowerBound, mid);
-            recMergeSort(copyToSort, mid + 1, upperBound);
+            recMergeSort(copyToSort, lowerBound, mid);                                  // recursively sorts lower part
+            recMergeSort(copyToSort, mid + 1, upperBound);                    // recursively sorts upper part
 
-            merge(copyToSort,lowerBound, mid+1, upperBound);
+            merge(copyToSort,lowerBound, mid+1, upperBound);                     // merge parts into new array
         }
     }
 

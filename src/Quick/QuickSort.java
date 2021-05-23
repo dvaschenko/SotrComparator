@@ -1,6 +1,6 @@
 package Quick;
 
-public class QuickSort {
+public class QuickSort {   // to see explanations visit https://en.wikipedia.org/wiki/Quicksort
 
     public int[] sort(int[] toSort) {
         int[] copyToSort = new int[toSort.length];
