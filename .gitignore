@@ -1,0 +1,4 @@
+#igore idea, out etc.
+.idea
+/out
+.iml
